@@ -1,0 +1,16 @@
+{
+	"name": "Ls_onpremempdb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-EPC29CH\\SQLEXPRESS;initial catalog=EmployeeDatabase;user id=Aarav",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxMDVmZDYzMS0yYjA4LTRjYmMtYmNiYS1iOTY0OGRhNzBiNmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "OnpremssqlserverselfIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
