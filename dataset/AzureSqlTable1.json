@@ -1,0 +1,59 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseusingkeyvault",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPNO",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ENAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MGR",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "HIREDATE",
+				"type": "datetime2",
+				"scale": 0
+			},
+			{
+				"name": "SAL",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "COMM",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEPTNO",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "Flag",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Emp_t"
+		}
+	}
+}
