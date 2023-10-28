@@ -1,0 +1,6 @@
+{
+	"name": "OnpremssqlserverselfIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
