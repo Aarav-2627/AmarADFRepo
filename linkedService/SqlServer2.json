@@ -1,16 +1,22 @@
 {
 	"name": "SqlServer2",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=DESKTOP-EPC29CH\\SQLEXPRESS;initial catalog=EmployeeDatabase;user id=Aarav",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNDAzNDRhOS1iOWIwLTRiZDYtOWI1OS1hNWFjYzJhODY3MjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqlkey"
+			}
 		},
 		"connectVia": {
 			"referenceName": "OnpremssqlserverselfIR",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
