@@ -2,7 +2,7 @@
 	"name": "onpremempds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SqlServer2",
+			"referenceName": "Ls_onpremempdb",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
