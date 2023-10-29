@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "Emp_source_synapsDW_test",
 				"folderPath": "output",
 				"fileSystem": "output"
 			},
