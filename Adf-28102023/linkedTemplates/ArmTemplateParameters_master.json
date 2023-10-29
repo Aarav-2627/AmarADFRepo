@@ -14,6 +14,9 @@
 		"Ls_onpremempdb_connectionString": {
 			"value": ""
 		},
+		"onpremsql_sever_empdb_emptable_ls_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://dlstorage28102023.dfs.core.windows.net/"
 		},
@@ -24,6 +27,9 @@
 			"value": "sqlkey"
 		},
 		"SqlServer1_properties_typeProperties_connectionString_secretName": {
+			"value": "sqlkey"
+		},
+		"emp_t_properties_typeProperties_connectionString_secretName": {
 			"value": "sqlkey"
 		},
 		"containerUri": {

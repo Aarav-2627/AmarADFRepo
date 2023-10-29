@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Ls_onpremempdb'"
 		},
+		"onpremsql_sever_empdb_emptable_ls_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'onpremsql_sever_empdb_emptable_ls'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dlstorage28102023.dfs.core.windows.net/"
@@ -32,6 +36,10 @@
 			"defaultValue": "sqlkey"
 		},
 		"SqlServer1_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "sqlkey"
+		},
+		"emp_t_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
 			"defaultValue": "sqlkey"
 		},
@@ -71,6 +79,9 @@
 					"Ls_onpremempdb_connectionString": {
 						"value": "[parameters('Ls_onpremempdb_connectionString')]"
 					},
+					"onpremsql_sever_empdb_emptable_ls_connectionString": {
+						"value": "[parameters('onpremsql_sever_empdb_emptable_ls_connectionString')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -82,10 +93,33 @@
 					},
 					"SqlServer1_properties_typeProperties_connectionString_secretName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_connectionString_secretName')]"
+					},
+					"emp_t_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('emp_t_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "Adf-28102023_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'Adf-28102023_ArmTemplate_0')]"
+			]
 		}
 	]
 }
