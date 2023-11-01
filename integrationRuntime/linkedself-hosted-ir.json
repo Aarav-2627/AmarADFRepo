@@ -1,0 +1,12 @@
+{
+	"name": "linkedself-hosted-ir",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/8c4a12e8-2883-41e4-90cb-b934f7e0a3ce/resourcegroups/Adf_Rg/providers/Microsoft.DataFactory/factories/Adf-28102023/integrationruntimes/OnpremssqlserverselfIR",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
